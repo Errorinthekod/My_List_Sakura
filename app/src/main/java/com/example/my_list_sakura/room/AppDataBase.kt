@@ -1,0 +1,14 @@
+package com.example.my_list_sakura.room
+
+
+import androidx.room.Database
+import androidx.room.RoomDatabase
+import com.example.my_list_sakura.models.ItemModel
+
+
+@Database(entities = [ItemModel::class], version = 1, exportSchema = false)
+abstract class AppDataBase : RoomDatabase() {
+
+    abstract fun recordDao(): RecordDao
+
+}
